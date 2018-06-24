@@ -3,7 +3,7 @@ before_script:
     - sudo apt-get install libboost-test-dev -y
 script:
     - mkdir "$TRAVIS_BUILD_DIR/build"
-    - cd "TRAVIS_BUILD_DIR/build"
+    - cd "$TRAVIS_BUILD_DIR/build"
     - cmake ..
     - cmake --build ..
     - cmake --build .. --target test
