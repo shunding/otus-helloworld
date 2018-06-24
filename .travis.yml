@@ -5,9 +5,9 @@ before_script:
     - cd build
 script:
     - cmake ..
-    - cmake --build ..
-    - cmake --build .. --target test
-    - cmake --build .. --target package
+    - cmake --build .
+    - cmake --build . --target test
+    - cmake --build . --target package
 deploy:
     provider: script
     skip_cleanup: true
