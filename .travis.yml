@@ -5,9 +5,9 @@ script:
     - mkdir "$TRAVIS_BUILD_DIR/build"
     - cd "$TRAVIS_BUILD_DIR/build"
     - cmake ..
-    - cmake --build ..
-    - cmake --build .. --target test
-    - cmake --build .. --target package
+    - cmake --build .
+    - cmake --build . --target test
+    - cmake --build . --target package
 deploy:
     provider: script
     skip_cleanup: true
