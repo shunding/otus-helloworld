@@ -1,5 +1,5 @@
 #include <iostream>
-#include "lib.h"
+#include <lib.h>
 
 int version() {
     return PROJECT_VERSION_PATCH;

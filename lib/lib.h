@@ -1,3 +1,3 @@
-#include "../include/version.h"
+#include <version.h>
 
 int version();
