@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../lib/lib.h"
+#include <lib.h>
 
 auto main(int argc, char* const argv[]) -> int {
     std::cout << "Hello, World!" << std::endl;
