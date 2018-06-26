@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.2)
 set(LIB_DIRECTORY lib)
 set(INCLUDE_DIRECTORY include)
 set(SOURCE_DIRECTORY src)
+set(TESTS_DIRECTORY tests)
 
 set(BUILD_NUMBER $ENV{TRAVIS_BUILD_NUMBER})
 
@@ -17,6 +18,7 @@ find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 add_subdirectory(${LIB_DIRECTORY})
 add_subdirectory(${INCLUDE_DIRECTORY})
 add_subdirectory(${SOURCE_DIRECTORY})
+add_subdirectory(${TESTS_DIRECTORY})
 
 set(CPACK_GENERATOR DEB)
 
@@ -30,5 +32,5 @@ include(CPack)
 
 enable_testing()
 
-add_test(test_version_failed test_main_cli)
+add_test(test_version_failed "${TESTS_DIRECTORY}/test_main_cli")
 
